@@ -1,0 +1,2410 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Ethics Committee Application</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <h1>Research Ethics Committee Application</h1>
+    <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<p id="stepIndicator">Step 1 of 11</p>
+    <form id="applicationForm">
+
+<!-- STEP 1 -->
+<div class="form-step active">
+
+    <h2>SECTION I - GENERAL INFORMATION</h2>
+
+    <!-- 1 -->
+    <div class="form-group">
+        <label>1. Name of the Applicant</label>
+        <input type="text" id="applicantName" name="applicantName">
+    </div>
+
+    <!-- 2 -->
+    <div class="form-group">
+        <label>
+            2. Principal Investigator(s)<br>
+            <small>(Name, Position, Affiliation, Domain Expertise, Email)</small>
+        </label>
+        <textarea id="principalInvestigator"
+            name="principalInvestigator"
+            rows="4"></textarea>
+    </div>
+
+    <!-- 3 -->
+    <div class="form-group">
+        <label>
+            3. Details of the Co-Investigator(s), if any<br>
+            <small>(Name, Position, Affiliation, Domain Expertise, Email)</small>
+        </label>
+        <textarea id="coInvestigator"
+            name="coInvestigator"
+            rows="4"></textarea>
+    </div>
+
+    <!-- 4 -->
+    <div class="form-group">
+        <label>
+            4. Principal Investigator's (in case of PhD Research Scholar)<br>
+            <small>(Name, School, Domain, Year of Study, Email)</small>
+        </label>
+        <textarea id="phdPrincipalInvestigator"
+            name="phdPrincipalInvestigator"
+            rows="4"></textarea>
+    </div>
+    <div class="form-group">
+    <label>Research Title</label>
+    <input type="text" id="researchTitle" name="researchTitle">
+</div>
+
+<!-- PASTE THIS -->
+<div class="form-group">
+    <label>Department / School / Centre</label>
+    <input
+        type="text"
+        id="department"
+        name="department"
+        placeholder="Enter your department"
+        required
+    >
+</div>
+
+<div class="form-group">
+    <label>Research Type</label>
+    <textarea id="researchType" name="researchType" rows="5"></textarea>
+</div>
+
+    <!-- 5 -->
+    <div class="form-group">
+        <label>
+            5. Details of the Co-Investigator(s), if any (in case of PhD Research Scholar)<br>
+            <small>(Name, School, Domain, Role in the Research, Email)</small>
+        </label>
+        <textarea id="phdCoInvestigator"
+            name="phdCoInvestigator"
+            rows="4"></textarea>
+    </div>
+
+    <!-- 6 -->
+    <div class="form-group">
+        <label>
+            6. Details of the Supervisor<br>
+            <small>(in case of PhD Research Scholar)</small>
+        </label>
+        <textarea id="supervisorDetails"
+            name="supervisorDetails"
+            rows="3"></textarea>
+    </div>
+
+    <!-- 7 -->
+    <div class="form-group">
+        <label>
+            7. Please state the name and email address of the person(s) to copy in the VU-REC acknowledgement email. If no name(s) are listed, the VU-REC Secretariat will only correspond with the PI.
+        </label>
+        <textarea id="copyEmail"
+            name="copyEmail"
+            rows="4"></textarea>
+    </div>
+
+    <div class="button-group">
+        <button type="button" id="nextBtn">Next</button>
+    </div>
+
+</div>
+
+<!-- STEP 2 -->
+<div class="form-step">
+
+    <h2>SECTION II - RESEARCH OVERVIEW</h2>
+
+<!-- 1 -->
+<div class="form-group">
+    <label>1. Title of the Research Study</label>
+    <input type="text" id="researchTitle" name="researchTitle">
+</div>
+
+<!-- 2 -->
+<div class="form-group">
+    <label>2. Short Title</label>
+    <input type="text" id="shortTitle" name="shortTitle">
+</div>
+
+<!-- 3 -->
+<div class="form-group">
+    <label>
+        3. Discipline of the Research
+        <br>
+        <small>(Specify. Restrict to a specific discipline. If multidisciplinary, mention all relevant disciplines.)</small>
+    </label>
+    <textarea id="discipline" name="discipline" rows="3"></textarea>
+</div>
+
+<!-- 4 -->
+<div class="form-group">
+    <label>4. Area(s) of Research</label>
+    <textarea id="researchArea" name="researchArea" rows="3"></textarea>
+</div>
+
+<!-- 5 -->
+<div class="form-group">
+    <label>
+        5. Research Study Summary in Lay Terms
+        <br>
+        <small>(150–250 words)</small>
+    </label>
+    <textarea id="laySummary" name="laySummary" rows="6"></textarea>
+</div>
+
+<!-- 6 -->
+<div class="form-group">
+    <label>
+        6. Explanatory Background and Significance of the Research
+        <br>
+        <small>(Between 500–1000 words. Include literature references for the study.)</small>
+    </label>
+    <textarea id="background" name="background" rows="10"></textarea>
+</div>
+
+<!-- 7 -->
+<div class="form-group">
+    <label>7. Research Objective(s)</label>
+    <textarea id="objectives" name="objectives" rows="4"></textarea>
+</div>
+
+<!-- 8 -->
+<div class="form-group">
+    <label>8. Research Problem(s)</label>
+    <textarea id="researchProblem" name="researchProblem" rows="4"></textarea>
+</div>
+
+<!-- 9 -->
+<div class="form-group">
+    <label>9. Research Design / Methodology</label>
+    <textarea id="methodology" name="methodology" rows="5"></textarea>
+</div>
+
+<!-- 10 -->
+<div class="form-group">
+    <label>
+        10. Type of Research
+        <br>
+        <small>
+            (Example: anonymous survey, non-sensitive interview,
+            observational study, experimental study,
+            secondary data, mixed-methods,
+            publicly available data, etc.)
+        </small>
+    </label>
+    <textarea id="researchType" name="researchType" rows="5"></textarea>
+</div>
+<!-- 11 -->
+<div class="form-group">
+    <label>
+        11. Research Setting
+        <br>
+        <small>
+            (e.g., University Campus, Online Platform, Clinical Site, etc.)
+            (Specify the research setting)
+        </small>
+    </label>
+    <textarea id="researchSetting" name="researchSetting" rows="3"></textarea>
+</div>
+
+<!-- 12 -->
+<div class="form-group">
+    <label>
+        12. Site(s) of Research (Single-centre / Multi-centre)
+        <br>
+        <small>(Specify the site of study setting)</small>
+    </label>
+    <textarea id="researchSites" name="researchSites" rows="3"></textarea>
+</div>
+
+<!-- 13 & 14 -->
+<div class="form-group">
+    <label>13. No. of Local Sites</label>
+    <input type="number" id="localSites" name="localSites" min="0">
+</div>
+
+<div class="form-group">
+    <label>14. No. of Overseas Sites</label>
+    <input type="number" id="overseasSites" name="overseasSites" min="0">
+</div>
+
+<!-- 15 -->
+<div class="form-group">
+    <label>
+        15. If Collaborative Research
+        <br>
+        <small>
+            (Provide details of the collaborating institution/agency/
+            investigator(s), designation, institutional email,
+            contact number and address.)
+        </small>
+    </label>
+    <textarea id="collaborativeResearch"
+        name="collaborativeResearch"
+        rows="5"></textarea>
+</div>
+
+<!-- 16 -->
+<div class="form-group">
+    <label>
+        16. Sampling Strategy
+        <br>
+        <small>
+            (e.g., Random, Purposive, Convenience)
+            (Specify the sampling strategy)
+        </small>
+    </label>
+    <textarea id="samplingStrategy"
+        name="samplingStrategy"
+        rows="4"></textarea>
+</div>
+
+<!-- 17 -->
+<div class="form-group">
+    <label>17. Tools / Materials / Questionnaires Used</label>
+    <textarea id="toolsUsed"
+        name="toolsUsed"
+        rows="4"></textarea>
+</div>
+
+<!-- 18 -->
+<div class="form-group">
+    <label>
+        18. Duration of Research Study
+        <br>
+        <small>(Days / Months / Years)</small>
+    </label>
+    <input type="text"
+           id="studyDuration"
+           name="studyDuration"
+           placeholder="Example: 12 Months">
+</div>
+
+<!-- 19 -->
+<div class="form-group">
+    <label>
+        19. Research Study Timeline
+        <br>
+        <small>(Start Date – End Date)</small>
+    </label>
+
+    <div style="display:flex; gap:15px;">
+
+        <div style="flex:1;">
+            <label>Start Date</label>
+            <input type="date"
+                   id="startDate"
+                   name="startDate">
+        </div>
+
+        <div style="flex:1;">
+            <label>End Date</label>
+            <input type="date"
+                   id="endDate"
+                   name="endDate">
+        </div>
+
+    </div>
+</div>
+
+<!-- 20 -->
+<div class="form-group">
+    <label>
+        20. Provide a Brief Account of the Principal Investigator's
+        Preliminary / Pilot Studies (if any) Pertinent to the Application
+    </label>
+    <textarea id="pilotStudy"
+        name="pilotStudy"
+        rows="5"></textarea>
+</div>
+<!-- 21 -->
+<div class="form-group">
+    <label>
+        21. Has this research proposal been reviewed by any other IRB / REC / DERCs?
+        <br>
+        <small>
+            (Write Yes / No. If Yes, provide details and attach the approval
+            letter as Annexure No.)
+        </small>
+    </label>
+    <label>Q21. Upload Research Overview (PDF)</label>
+
+<input
+    type="file"
+    name="researchOverview21"
+    accept=".pdf"
+>
+</div>
+
+<!-- 22 -->
+<div class="form-group">
+    <label>
+        22. In case of Collaborative Research, has this research proposal been
+        reviewed by any Ethics Review Board of the collaborating investigator?
+        <br>
+        <small>
+            (Write Yes / No. If Yes, provide details and attach the approval
+            letter as Annexure No.)
+        </small>
+    </label>
+    <label>Q22. Upload Supporting Research Document (PDF)</label>
+
+<input
+    type="file"
+    name="researchOverview22"
+    accept=".pdf"
+>
+</div>
+
+<!-- 23 -->
+<div class="form-group">
+    <label>
+        23. Approved Research Proposal for the Study
+        <br>
+        <small>
+            (Specify submitted as Annexure No. / Not Submitted)
+        </small>
+    </label>
+    <label>Q23. Upload Research Methodology (PDF)</label>
+
+<input
+    type="file"
+    name="researchOverview23"
+    accept=".pdf"
+>
+</div>
+
+<!-- 24 -->
+<div class="form-group">
+    <label>
+        24. Dissemination of Research Findings
+        <br>
+        <small>
+            (Specify plans for dissemination of findings such as journals,
+            conferences, policy briefs, theses, community reports, public repositories, etc.)
+        </small>
+    </label>
+    <textarea id="dissemination" name="dissemination" rows="5"></textarea>
+</div>
+
+<!-- 25 -->
+<div class="form-group">
+    <label>
+        25. Will participants or communities receive a summary of the research findings?
+    </label>
+    <select id="participantSummary" name="participantSummary">
+        <option value="">Select</option>
+        <option>Yes</option>
+        <option>No</option>
+    </select>
+</div>
+
+<!-- 26 -->
+<h3>26. Plagiarism & AI Detection</h3>
+
+<div class="form-group">
+    <label>
+        a. Plagiarism Percentage Detected
+        <br>
+        <small>
+            (Acceptable limit as per UGC/ICSSR norms: ≤10% excluding bibliography,
+            quotations and standard phrases)
+        </small>
+    </label>
+    <input type="number"
+           id="plagiarismPercentage"
+           name="plagiarismPercentage"
+           placeholder="Enter Percentage">
+</div>
+
+<div class="form-group">
+    <label>
+        b. AI-generated Content Detected
+        <br>
+        <small>(Percentage / Extent of AI-generated content)</small>
+    </label>
+    <input type="number"
+           id="aiContentPercentage"
+           name="aiContentPercentage"
+           placeholder="Enter Percentage">
+</div>
+
+<div class="form-group">
+    <label>
+        c. Approved Plagiarism Detection Software and AI-content Detection Tools Used
+        <br>
+        <small>(Mention the software names)</small>
+    </label>
+    <textarea id="softwareUsed"
+              name="softwareUsed"
+              rows="3"></textarea>
+</div>
+
+<!-- 27 -->
+<div class="form-group">
+    <label>
+        27. Plagiarism & AI Detection Report
+        <br>
+        <small>(Specify submitted as Annexure No. / Not Submitted)</small>
+    </label>
+    <label>Q27. Upload Study Procedures (PDF)</label>
+
+<input
+    type="file"
+    name="researchOverview27"
+    accept=".pdf"
+>
+</div>
+
+<!-- 28 -->
+<div class="form-group">
+    <label>
+        28. Requested Ethics Review Category
+        <br>
+        <small>
+            (Exempt Review / Expedited Review /
+            Full Committee Review and justify the selected category)
+        </small>
+    </label>
+    <textarea id="reviewCategory"
+              name="reviewCategory"
+              rows="4"></textarea>
+</div>
+
+<!-- 29 -->
+<div class="form-group">
+    <label>
+        29. Stage of Study (For PhD Research Scholar)
+        <br>
+        <small>
+            (Specify whether proposal stage or data collection stage)
+        </small>
+    </label>
+    <textarea id="studyStage"
+              name="studyStage"
+              rows="3"></textarea>
+</div>
+
+<!-- 30 -->
+<div class="form-group">
+    <label>
+        30. Is the research study and protocol approved by the RAC of the research scholar?
+        <br>
+        <small>
+            (Write Yes / No. If Yes, specify Annexure No.
+            If No, specify reasons.)
+        </small>
+    </label>
+    <label>Q30. Upload Additional Research Information (PDF)</label>
+
+<input
+    type="file"
+    name="researchOverview30"
+    accept=".pdf"
+>
+</div>
+
+<div class="button-group">
+    <button type="button" id="prevBtn">Previous</button>
+    <button type="button" id="nextBtn2">Next</button>
+</div>
+</div>
+
+
+<!-- STEP 3 -->
+<div class="form-step">
+
+<h2>SECTION III - PARTICIPANTS</h2>
+
+<!-- 1 -->
+<div class="form-group">
+    <label>
+        1. Subject of Research of the Present Research
+        <br>
+        <small>
+            (Specify human participants, animals, human biological materials,
+            personal or digital data subjects, institutions or organisations,
+            communities or collectives, environments/places,
+            ecosystems/One Health entities, cultural and material artefacts,
+            AI systems and digital entities, legal, policy and
+            socio-economic systems, or any other type not mentioned above.)
+        </small>
+    </label>
+    <textarea id="subjectResearch" name="subjectResearch" rows="6"></textarea>
+</div>
+
+<!-- 2 -->
+<div class="form-group">
+    <label>
+        2. Specify the Details of the Subject of Research in Case of Human Individuals
+        <br>
+        <small>
+            (Specify details on the general adult population,
+            students, employees, community members, consumers,
+            key informants, experts, professionals,
+            online participants, social media users,
+            or any other details not mentioned above.)
+        </small>
+    </label>
+    <textarea id="humanIndividuals" name="humanIndividuals" rows="6"></textarea>
+</div>
+
+<!-- 3 -->
+<div class="form-group">
+    <label>
+        3. How Have You Addressed the Ethical Implications in the Case of Human Individuals as Subjects?
+        <br>
+        <small>
+            (Specify details regarding informed consent,
+            privacy, risk-benefit balance,
+            confidentiality, or any other information.)
+        </small>
+    </label>
+    <textarea id="humanEthics" name="humanEthics" rows="6"></textarea>
+</div>
+
+<!-- 4 -->
+<div class="form-group">
+    <label>
+        4. Specify the Details of the Subject of Research in Case of Vulnerable Human Populations
+        <br>
+        <small>
+            (Children, adolescents, elderly,
+            cognitively/psychologically vulnerable persons,
+            economically or socially disadvantaged groups,
+            women in sensitive contexts, prisoners,
+            refugees, migrants, tribal communities,
+            or any other vulnerable group.)
+        </small>
+    </label>
+    <textarea id="vulnerablePopulation" name="vulnerablePopulation" rows="7"></textarea>
+</div>
+
+<!-- 5 -->
+<div class="form-group">
+    <label>
+        5. How Have You Addressed the Ethical Implications of Using Vulnerable Human Populations as Subjects?
+        <br>
+        <small>
+            (Additional safeguards,
+            assent and consent,
+            culturally appropriate protection,
+            power dynamics,
+            or any other information.)
+        </small>
+    </label>
+    <textarea id="vulnerableEthics" name="vulnerableEthics" rows="6"></textarea>
+</div>
+
+<!-- 6 -->
+<div class="form-group">
+    <label>
+        6. Specify the Details of the Subject of Research in Case of Communities / Groups
+        <br>
+        <small>
+            (Cultural communities,
+            religious or ethnic groups,
+            villages, urban communities,
+            professional communities,
+            online communities/networks,
+            or any other details.)
+        </small>
+    </label>
+    <textarea id="communities" name="communities" rows="6"></textarea>
+</div>
+
+<!-- 7 -->
+<div class="form-group">
+    <label>
+        7. How Have You Addressed the Ethical Implications in Cases Involving Communities / Groups as Subjects?
+        <br>
+        <small>
+            (Community consent,
+            gatekeeper permissions,
+            protection from stigma,
+            group-level harm,
+            or any other information.)
+        </small>
+    </label>
+    <textarea id="communityEthics" name="communityEthics" rows="6"></textarea>
+</div>
+
+<!-- 8 -->
+<div class="form-group">
+    <label>
+        8. Specify the Details of the Subject of Research in Case of Organisations and Institutions
+        <br>
+        <small>
+            (Universities, schools,
+            corporations, startups,
+            government departments,
+            NGOs, healthcare institutions,
+            policing units, etc.)
+        </small>
+    </label>
+    <textarea id="organisationDetails" name="organisationDetails" rows="6"></textarea>
+</div>
+
+<!-- 9 -->
+<div class="form-group">
+    <label>
+        9. How Have You Addressed the Ethical Implications in the Case of Organisations and Institutions as Subjects?
+        <br>
+        <small>
+            (Institutional permission,
+            confidentiality of organisational data,
+            conflict of interest management,
+            or any other information.)
+        </small>
+    </label>
+    <textarea id="organisationEthics" name="organisationEthics" rows="6"></textarea>
+</div>
+
+<!-- 10 -->
+<div class="form-group">
+    <label>
+        10. Specify the Details of the Subject of Research in Case of Animals
+        <br>
+        <small>
+            (Laboratory animals,
+            farm animals,
+            wild animals,
+            ecological research subjects,
+            or any other details.)
+        </small>
+    </label>
+    <textarea id="animalResearch" name="animalResearch" rows="6"></textarea>
+</div>
+<!-- 11 -->
+<div class="form-group">
+    <label>
+        11. How have you addressed the ethical implications when animals are subjects?
+        <br>
+        <small>
+            (Specify details regarding Animal Ethics Committee approvals,
+            humane treatment, replacement, reduction, refinement,
+            or any other information not mentioned above.)
+        </small>
+    </label>
+    <textarea id="animalEthics" name="animalEthics" rows="6"></textarea>
+</div>
+
+<!-- 12 -->
+<div class="form-group">
+    <label>
+        12. Specify the details of the subject of research in case of biological materials/specimens
+        <br>
+        <small>
+            (Specify details on human biological samples (blood, saliva,
+            tissue, urine, DNA), stored clinical samples/biobank materials,
+            animal tissues and biological specimens, Trial Registration
+            Number, Regulatory Approvals, or any other details.)
+        </small>
+    </label>
+    <label>Q12. Upload Participant Information Sheet (PDF)</label>
+
+<input
+    type="file"
+    name="participants12"
+    accept=".pdf"
+>
+
+    <label style="margin-top:10px;">
+        Annexure Details
+        <small>(Specify submitted as Annexure No. / Not Submitted)</small>
+    </label>
+    <input type="text" id="biologicalAnnexure" name="biologicalAnnexure">
+</div>
+
+<!-- 13 -->
+<div class="form-group">
+    <label>
+        13. How have you addressed the ethical implications when using biological materials/specimens as subjects?
+        <br>
+        <small>
+            (Specify details regarding biobank consent,
+            secondary use, source of data,
+            permission letter, genetic privacy,
+            data-sharing governance,
+            or any other information.)
+        </small>
+    </label>
+    <label>Q13. Upload Consent Form (PDF)</label>
+
+<input
+    type="file"
+    name="participants13"
+    accept=".pdf"
+>
+
+    <label style="margin-top:10px;">
+        Annexure Details
+        <small>(Specify submitted as Annexure No. / Not Submitted)</small>
+    </label>
+    <input type="text" id="biologicalEthicsAnnexure" name="biologicalEthicsAnnexure">
+</div>
+
+<!-- 14 -->
+<div class="form-group">
+    <label>
+        14. Specify the details of the subject of research in case of data as participants (Data Subjects)
+        <br>
+        <small>
+            (Personal data, student records,
+            employment records,
+            health data,
+            sensitive data,
+            digital footprints,
+            browsing patterns,
+            administrative datasets,
+            institutional databases,
+            or any other details.)
+        </small>
+    </label>
+    <textarea id="dataSubjects" name="dataSubjects" rows="7"></textarea>
+</div>
+
+<!-- 15 -->
+<div class="form-group">
+    <label>
+        15. How have you addressed the ethical implications in the case of data subjects?
+        <br>
+        <small>
+            (Specify details regarding
+            Data Protection Laws,
+            anonymisation,
+            consent for reuse,
+            cybersecurity safeguards,
+            or any other information.)
+        </small>
+    </label>
+    <textarea id="dataEthics" name="dataEthics" rows="6"></textarea>
+</div>
+
+<!-- 16 -->
+<div class="form-group">
+    <label>
+        16. Specify the details of the subject of research in case of Digital / AI / Technological entities as participants
+        <br>
+        <small>
+            (AI systems being evaluated,
+            algorithms interacting with users,
+            robots,
+            UX testing platforms,
+            virtual environments,
+            avatars,
+            or any other details.)
+        </small>
+    </label>
+    <textarea id="digitalEntities" name="digitalEntities" rows="7"></textarea>
+</div>
+
+<!-- 17 -->
+<div class="form-group">
+    <label>
+        17. How have you addressed the ethical implications in the case of cultural, visual and creative subjects?
+        <br>
+        <small>
+            (Human impact,
+            transparency,
+            fairness,
+            algorithmic bias safeguards,
+            harm prevention,
+            or any other information.)
+        </small>
+    </label>
+    <textarea id="creativeEthics" name="creativeEthics" rows="6"></textarea>
+</div>
+
+<!-- 18 -->
+<div class="form-group">
+    <label>
+        18. Specify the details of the subject of research in case of cultural, visual and creative subjects
+        <br>
+        <small>
+            (Images of people,
+            voices,
+            video recordings,
+            cultural artefacts,
+            artworks,
+            symbols,
+            public installations,
+            visual design research participants,
+            or any other details.)
+        </small>
+    </label>
+    <textarea id="creativeSubjects" name="creativeSubjects" rows="7"></textarea>
+</div>
+
+<!-- 19 -->
+<div class="form-group">
+    <label>
+        19. How have you addressed the ethical implications in the case of cultural, visual and creative subjects?
+        <br>
+        <small>
+            (Consent for use,
+            ownership,
+            dignity,
+            misrepresentation safeguards,
+            or any other information.)
+        </small>
+    </label>
+    <textarea id="creativeProtection" name="creativeProtection" rows="6"></textarea>
+</div>
+
+<!-- 20 -->
+<div class="form-group">
+    <label>
+        20. Participant Population
+        <small>(Specify sample size)</small>
+    </label>
+    <input type="number" id="sampleSize" name="sampleSize">
+</div>
+<!-- 21 -->
+<div class="form-group">
+    <label>
+        21. Participant Population
+        <br>
+        <small>(Justify the sample size)</small>
+    </label>
+    <textarea id="sampleJustification" name="sampleJustification" rows="4"></textarea>
+</div>
+
+<!-- 22 -->
+<div class="form-group">
+    <label>
+        22. Are the participants in a dependent relationship with the researchers?
+    </label>
+    <select id="dependentRelationship" name="dependentRelationship">
+        <option value="">Select</option>
+        <option>Yes</option>
+        <option>No</option>
+    </select>
+</div>
+
+<!-- 23 -->
+<div class="form-group">
+    <label>
+        23. If Yes, please provide details
+    </label>
+    <textarea id="dependentRelationshipDetails" name="dependentRelationshipDetails" rows="4"></textarea>
+</div>
+
+<!-- 24 -->
+<div class="form-group">
+    <label>
+        24. If participants include students, colleagues, staff, or other employees of Vidyashilp University, describe the steps taken to promote voluntary participation, ensure freedom of choice, and affirm that participation or withdrawal will have no academic, professional, or employment consequences.
+    </label>
+    <textarea id="voluntaryParticipation" name="voluntaryParticipation" rows="7"></textarea>
+</div>
+
+<!-- 25 -->
+<div class="form-group">
+    <label>25. Age of Participants</label>
+
+    <div style="display:flex; gap:20px;">
+
+        <div style="flex:1;">
+            <label>Lower Age Limit</label>
+            <input type="number"
+                   id="lowerAge" name="lowerAge"
+                   min="0">
+        </div>
+
+        <div style="flex:1;">
+            <label>Upper Age Limit (if any)</label>
+            <input type="number"
+                   id="upperAge" name="upperAge"
+                   min="0">
+        </div>
+
+    </div>
+
+</div>
+
+<!-- 26 -->
+<div class="form-group">
+    <label>
+        26. Submit the Participant Information Sheet
+        <br>
+        <small>(Specify submitted as Annexure No. / Not Submitted)</small>
+    </label>
+
+    <label>Q26. Upload Participant Recruitment Material (PDF)</label>
+
+<input
+    type="file"
+    name="participants26"
+    accept=".pdf"
+>
+</div>
+
+<!-- 27 -->
+<div class="form-group">
+    <label>
+        27. Describe Subject Research Visits
+        <br>
+        <small>(Specify frequency and number of visits planned)</small>
+    </label>
+    <textarea id="researchVisits" name="researchVisits"
+              rows="4"></textarea>
+</div>
+
+<!-- 28 -->
+<div class="form-group">
+    <label>
+        28. Describe Subject Research Visits
+        <br>
+        <small>(Specify duration of procedures involved during each visit)</small>
+    </label>
+    <textarea id="visitDuration" name="visitDuration"
+              rows="4"></textarea>
+</div>
+
+<!-- 29 -->
+<div class="form-group">
+    <label>
+        29. Discuss the Potential Difficulties and Limitations of the Proposed Research Plan
+    </label>
+    <textarea id="researchLimitations" name="researchLimitations"
+              rows="5"></textarea>
+</div>
+
+<!-- 30 -->
+<div class="form-group">
+    <label>
+        30. Discuss the Alternative Approaches to Achieve the Aims
+    </label>
+    <textarea id="alternativeApproaches" name="alternativeApproaches"
+              rows="5"></textarea>
+</div>
+
+<div class="button-group">
+    <button type="button" id="prevBtn2">Previous</button>
+    <button type="button" id="nextBtn3">Next</button>
+</div>
+
+
+</div>
+
+<!-- STEP 4 -->
+<div class="form-step">
+<h2>SECTION IV - RECRUITMENT PROCESS</h2>
+
+<!-- 1 -->
+<div class="form-group">
+    <label>
+        1. Explain the process of recruitment in detail
+        <br>
+        <small>
+            (Specify where and how potential research participants
+            will be recruited/contacted)
+        </small>
+    </label>
+    <textarea id="recruitmentProcess" name="recruitmentProcess" rows="5"></textarea>
+</div>
+
+<!-- 2 -->
+<div class="form-group">
+    <label>
+        2. Please submit a copy of any advertisements/posters that will be used
+        <br>
+        <small>
+            (Specify submitted as Annexure No. / Not Submitted)
+        </small>
+    </label>
+    <label>Q2. Upload Recruitment Process Document (PDF)</label>
+
+<input
+    type="file"
+    name="recruitment2"
+    accept=".pdf"
+>
+</div>
+
+<!-- 3 -->
+<div class="form-group">
+    <label>
+        3. Describe the period of recruitment to accomplish the aims of this research
+    </label>
+
+    <div style="display:flex; gap:20px;">
+
+        <div style="flex:1;">
+            <label>From</label>
+            <input type="date"
+                   id="recruitmentFrom" name="recruitmentFrom">
+        </div>
+
+        <div style="flex:1;">
+            <label>To</label>
+            <input type="date"
+                   id="recruitmentTo" name="recruitmentTo">
+        </div>
+
+    </div>
+</div>
+
+<!-- 4 -->
+<div class="form-group">
+    <label>
+        4. Participant Population
+        <br>
+        <small>(Specify Inclusion Criteria)</small>
+    </label>
+    <textarea id="inclusionCriteria" name="inclusionCriteria"
+              rows="4"></textarea>
+</div>
+
+<!-- 5 -->
+<div class="form-group">
+    <label>
+        5. Participant Population
+        <br>
+        <small>(Specify Exclusion Criteria)</small>
+    </label>
+    <textarea id="exclusionCriteria" name="exclusionCriteria"
+              rows="4"></textarea>
+</div>
+
+<!-- 6 -->
+<div class="form-group">
+    <label>
+        6. Please explain the participant's recruitment restrictions, if any
+    </label>
+    <textarea id="recruitmentRestrictions" name="recruitmentRestrictions"
+              rows="4"></textarea>
+</div>
+
+<!-- 7 -->
+<div class="form-group">
+    <label>
+        7. Explain how participant selection is fair,
+        non-discriminatory, and scientifically justified
+    </label>
+    <textarea id="participantSelection" name="participantSelection"
+              rows="5"></textarea>
+</div>
+
+<!-- 8 -->
+<div class="form-group">
+    <label>
+        8. Describe measures taken to avoid over-burdening
+        vulnerable or easily accessible populations
+    </label>
+    <textarea id="burdenMeasures" name="burdenMeasures"
+              rows="5"></textarea>
+</div>
+
+<!-- 9 -->
+<div class="form-group">
+    <label>
+        9. Reimbursement to participants
+        <br>
+        <small>(Specify if any)</small>
+    </label>
+    <textarea id="participantReimbursement" name="participantReimbursement"
+              rows="4"></textarea>
+</div>
+
+<div class="button-group">
+    <button type="button" id="prevBtn3">Previous</button>
+    <button type="button" id="nextBtn4">Next</button>
+</div>
+
+</div>   <!-- CLOSE STEP 4 -->
+
+
+<!-- STEP 5 -->
+<div class="form-step">
+
+    <h2>SECTION V - CONSENT</h2>
+
+<!-- 1 -->
+<div class="form-group">
+    <label>
+        1. Will your research require taking consent from participants?
+        <br>
+        <small>(Write Yes / No and justify)</small>
+    </label>
+    <textarea id="requireConsent" name="requireConsent" rows="4"></textarea>
+</div>
+
+<!-- 2 -->
+<div class="form-group">
+    <label>
+        2. Type of Consent
+        <br>
+        <small>(Specify Written, Verbal, Digital/Online)</small>
+    </label>
+    <input type="text"
+           id="consentType" name="consentType"
+           placeholder="Example: Written">
+</div>
+
+<!-- 3 -->
+<div class="form-group">
+    <label>
+        3. Summarise the Consent Procedure
+    </label>
+    <textarea id="consentProcedure" name="consentProcedure"
+              rows="5"></textarea>
+</div>
+
+<!-- 4 -->
+<div class="form-group">
+    <label>
+        4. Will Assent be taken for minors?
+        <br>
+        <small>(Write Yes / No and justify)</small>
+    </label>
+    <textarea id="minorAssent" name="minorAssent"
+              rows="4"></textarea>
+</div>
+
+<!-- 5 -->
+<div class="form-group">
+    <label>
+        5. Language(s) of Consent Documents
+    </label>
+    <input type="text"
+           id="consentLanguage" name="consentLanguage">
+</div>
+
+<!-- 6 -->
+<div class="form-group">
+    <label>
+        6. Specify how informed consent will be obtained
+    </label>
+    <textarea id="informedConsentProcedure" name="informedConsentProcedure"
+              rows="5"></textarea>
+</div>
+
+<!-- 7 -->
+<div class="form-group">
+    <label>
+        7. Specify who will obtain consent
+    </label>
+    <textarea id="consentObtainedBy" name="consentObtainedBy"
+              rows="4"></textarea>
+</div>
+
+<!-- 8 -->
+<div class="form-group">
+    <label>
+        8. Submit the Consent Form if the data collected is not anonymous
+        <br>
+        <small>(Specify submitted as Annexure No. / Not Submitted)</small>
+    </label>
+
+    <label>Q8. Upload Consent Procedure (PDF)</label>
+
+<input
+    type="file"
+    name="consent8"
+    accept=".pdf"
+>
+</div>
+<!-- 9 -->
+<div class="form-group">
+    <label>
+        9. Language(s) of Assent Documents
+    </label>
+    <input type="text"
+           id="assentLanguage"
+           name="assentLanguage">
+</div>
+
+<!-- 10 -->
+<div class="form-group">
+    <label>
+        10. Specify how assent will be obtained
+    </label>
+    <textarea id="assentProcedure"
+              name="assentProcedure"
+              rows="4"></textarea>
+</div>
+
+<!-- 11 -->
+<div class="form-group">
+    <label>
+        11. Specify who will obtain assent
+    </label>
+    <textarea id="assentObtainedBy"
+              name="assentObtainedBy"
+              rows="4"></textarea>
+</div>
+
+<!-- 12 -->
+<div class="form-group">
+    <label>
+        12. Submit the Assent Form if the data collected is not anonymous
+        <br>
+        <small>(Specify submitted as Annexure No. / Not Submitted)</small>
+    </label>
+    <label>Q12. Upload Consent Documentation (PDF)</label>
+
+<input
+    type="file"
+    name="consent12"
+    accept=".pdf"
+>
+</div>
+
+<!-- 13 -->
+<div class="form-group">
+    <label>
+        13. Will any part of the procedures be audio-recorded,
+        video-recorded, or placed on other electronic media?
+        <br>
+        <small>(Write Yes (justify) / No)</small>
+    </label>
+    <textarea id="recordingProcedure"
+              name="recordingProcedure"
+              rows="4"></textarea>
+</div>
+
+<!-- 14 -->
+<div class="form-group">
+    <label>
+        14. Will participants who decline to be recorded be excluded from the study?
+        <br>
+        <small>(Write Yes / No)</small>
+    </label>
+    <select id="recordingExclusion"
+            name="recordingExclusion">
+        <option value="">Select</option>
+        <option>Yes</option>
+        <option>No</option>
+    </select>
+</div>
+
+<!-- 15 -->
+<div class="form-group">
+    <label>
+        15. If No, what is the justification for using the recording in the research?
+    </label>
+    <textarea id="recordingJustification"
+              name="recordingJustification"
+              rows="5"></textarea>
+</div>
+
+<!-- 16 -->
+<div class="form-group">
+    <label>
+        16. If No, specify the alternative
+    </label>
+    <textarea id="recordingAlternative"
+              name="recordingAlternative"
+              rows="5"></textarea>
+</div>
+<!-- 17 -->
+<div class="form-group">
+    <label>
+        17. Explain how participants may withdraw from the study at any stage
+        <br>
+        <small>(Write Yes / No and Justify)</small>
+    </label>
+    <textarea id="withdrawalProcedure"
+              name="withdrawalProcedure"
+              rows="4"></textarea>
+</div>
+
+<!-- 18 -->
+<div class="form-group">
+    <label>
+        18. Does the consent form honour the right of the participants to withdraw at any stage of the research?
+        <br>
+        <small>(Specify the clause in the consent form)</small>
+    </label>
+    <textarea id="withdrawClause"
+              name="withdrawClause"
+              rows="4"></textarea>
+</div>
+
+<!-- 19 -->
+<div class="form-group">
+    <label>
+        19. Does the study involve any form of covert observation, deception, or incomplete disclosure to participants?
+        <br>
+        <small>(Write Yes / No. If Yes, justify the purpose)</small>
+    </label>
+    <textarea id="deceptionStudy"
+              name="deceptionStudy"
+              rows="4"></textarea>
+</div>
+
+<!-- 20 -->
+<h3>20. If Yes, Explain</h3>
+
+<div class="form-group">
+    <label>a. Why full disclosure is not possible</label>
+    <textarea id="fullDisclosure"
+              name="fullDisclosure"
+              rows="3"></textarea>
+</div>
+
+<div class="form-group">
+    <label>b. How risks are minimised</label>
+    <textarea id="riskMinimised"
+              name="riskMinimised"
+              rows="3"></textarea>
+</div>
+
+<div class="form-group">
+    <label>c. Whether and how debriefing will occur</label>
+    <textarea id="debriefing"
+              name="debriefing"
+              rows="3"></textarea>
+</div>
+
+<div class="form-group">
+    <label>d. Why no non-deceptive alternative exists</label>
+    <textarea id="noAlternative"
+              name="noAlternative"
+              rows="3"></textarea>
+</div>
+
+<!-- 21 -->
+<div class="form-group">
+    <label>
+        21. Indicate whether re-consent will be obtained in cases of protocol modification,
+        extended duration, or new uses of data
+    </label>
+    <textarea id="reConsent"
+              name="reConsent"
+              rows="4"></textarea>
+</div>
+
+<!-- 22 -->
+<div class="form-group">
+    <label>
+        22. If requesting a waiver, please provide a valid justification
+    </label>
+    <textarea id="waiverJustification"
+              name="waiverJustification"
+              rows="4"></textarea>
+</div>
+
+<!-- 23 -->
+<div class="form-group">
+    <label>
+        23. If applying for a waiver, justify how your research involves
+        no more than minimal risk to the participants
+    </label>
+    <textarea id="minimalRisk"
+              name="minimalRisk"
+              rows="4"></textarea>
+</div>
+
+<!-- 24 -->
+<div class="form-group">
+    <label>
+        24. If applying for a waiver, justify how the waiver or alteration
+        will not adversely affect the rights and welfare of the participants
+    </label>
+    <textarea id="participantRights"
+              name="participantRights"
+              rows="4"></textarea>
+</div>
+
+<div class="button-group">
+    <button type="button" id="prevBtn4">Previous</button>
+    <button type="button" id="nextBtn5">Next</button>
+</div>
+
+</div>   <!-- CLOSE STEP 5 -->
+
+    <!-- STEP 6 -->
+<div class="form-step">
+
+    <h2>SECTION VI - DATA MANAGEMENT</h2>
+
+<!-- 1 -->
+<div class="form-group">
+    <label>
+        1. Nature of Data / Methodology
+        <br>
+        <small>
+            (Specify Biomedical or Clinical Trial / Social or Behavioural
+            Research / Data-Only or Secondary Data /
+            Community-based Participatory Research /
+            Emergency / Disaster Research)
+        </small>
+    </label>
+    <textarea id="dataMethodology"
+              name="dataMethodology"
+              rows="5"></textarea>
+</div>
+
+<!-- 2 -->
+<div class="form-group">
+    <label>
+        2. Types of Data Collected
+        <br>
+        <small>(Write Identifiable / Coded / Anonymous)</small>
+    </label>
+    <input type="text"
+           id="dataType"
+           name="dataType">
+</div>
+
+<!-- 3 -->
+<div class="form-group">
+    <label>
+        3. Identifiable Data Collected?
+        <br>
+        <small>(Write Yes (justify) / No)</small>
+    </label>
+    <textarea id="identifiableData"
+              name="identifiableData"
+              rows="3"></textarea>
+</div>
+
+<!-- 4 -->
+<div class="form-group">
+    <label>
+        4. If Yes, please state the personal data that will be collected
+        <br>
+        <small>(e.g., names and contact information, etc.)</small>
+    </label>
+    <textarea id="personalDataCollected"
+              name="personalDataCollected"
+              rows="5"></textarea>
+</div>
+
+<!-- 5 -->
+<div class="form-group">
+    <label>
+        5. If Yes, how long will the data recordings be retained?
+    </label>
+    <textarea id="dataRetention"
+              name="dataRetention"
+              rows="3"></textarea>
+</div>
+
+<!-- 6 -->
+<div class="form-group">
+    <label>
+        6. If Yes, how will the data be disposed of?
+    </label>
+    <textarea id="dataDisposal"
+              name="dataDisposal"
+              rows="3"></textarea>
+</div>
+
+<!-- 7 -->
+<div class="form-group">
+    <label>
+        7. Audio / Video Recording?
+    </label>
+
+    <label style="margin-top:10px;">
+        Storage Details
+        <small>(Specify storage)</small>
+    </label>
+
+    <textarea id="recordingStorage"
+              name="recordingStorage"
+              rows="3"></textarea>
+
+    <label style="margin-top:10px;">
+        Disposal Details
+        <small>(Specify disposal)</small>
+    </label>
+
+    <textarea id="recordingDisposal"
+              name="recordingDisposal"
+              rows="3"></textarea>
+
+</div>
+
+<!-- 8 -->
+<div class="form-group">
+    <label>
+        8. If audio/video recording is used, explain how the recorded information will be used
+    </label>
+    <textarea id="recordingUsage"
+              name="recordingUsage"
+              rows="5"></textarea>
+</div>
+
+<!-- 9 -->
+<div class="form-group">
+    <label>
+        9. If audio/video recording is used, explain if the recorded information will be published with or without identifying research participants
+    </label>
+    <textarea id="recordingPublication"
+              name="recordingPublication"
+              rows="5"></textarea>
+</div>
+<!-- 10 -->
+<div class="form-group">
+    <label>
+        10. Data Storage Plan
+        <br>
+        <small>(Provide details of location, security, encryption)</small>
+    </label>
+    <textarea id="dataStoragePlan"
+              name="dataStoragePlan"
+              rows="5"></textarea>
+</div>
+
+<!-- 11 -->
+<div class="form-group">
+    <label>
+        11. Details of persons having access to the data and their role in the research study
+        <br>
+        <small>
+            (Specify ownership of research data, designated data custodian,
+            and arrangements for collaborative or supervised research)
+        </small>
+    </label>
+    <textarea id="dataAccessPersons"
+              name="dataAccessPersons"
+              rows="6"></textarea>
+</div>
+
+<!-- 12 -->
+<div class="form-group">
+    <label>
+        12. Explain the data protection measures put in place for this research
+    </label>
+    <textarea id="dataProtectionMeasures"
+              name="dataProtectionMeasures"
+              rows="5"></textarea>
+</div>
+
+<!-- 13 -->
+<div class="form-group">
+    <label>
+        13. Explain the protocol for protecting research participants' privacy and the confidentiality of their personal data
+    </label>
+    <textarea id="privacyProtocol"
+              name="privacyProtocol"
+              rows="5"></textarea>
+</div>
+
+<!-- 14 -->
+<div class="form-group">
+    <label>
+        14. Describe procedures to be followed in case of data breach, loss, or unauthorized access, including participant notification and corrective actions
+    </label>
+    <textarea id="dataBreachProcedure"
+              name="dataBreachProcedure"
+              rows="6"></textarea>
+</div>
+
+<!-- 15 -->
+<div class="form-group">
+    <label>
+        15. In case a participant withdraws from the study at any stage
+        <br>
+        <small>
+            (Specify whether data already collected will be retained or destroyed,
+            and clarify that withdrawal will not result in any penalty or loss of benefits)
+        </small>
+    </label>
+    <textarea id="participantWithdrawalData"
+              name="participantWithdrawalData"
+              rows="6"></textarea>
+</div>
+
+<!-- 16 -->
+<div class="form-group">
+    <label>
+        16. Explain the usage of research data, including personal data, after research completion
+    </label>
+    <textarea id="researchDataUsage"
+              name="researchDataUsage"
+              rows="5"></textarea>
+</div>
+
+<!-- 17 -->
+<div class="form-group">
+    <label>
+        17. Specify duration of data retention, including audio/video recording
+    </label>
+    <textarea id="retentionDuration"
+              name="retentionDuration"
+              rows="4"></textarea>
+</div>
+
+<!-- 18 -->
+<div class="form-group">
+    <label>
+        18. Specify Data Sharing Plans, if any
+    </label>
+    <textarea id="dataSharingPlan"
+              name="dataSharingPlan"
+              rows="4"></textarea>
+</div>
+<!-- 19 -->
+<div class="form-group">
+    <label>
+        19. Specify Data Publication Plans, if any
+    </label>
+    <textarea id="dataPublicationPlan"
+              name="dataPublicationPlan"
+              rows="4"></textarea>
+</div>
+
+<!-- 20 -->
+<div class="form-group">
+    <label>
+        20. Will the information collected be published?
+        <br>
+        <small>
+            (Specify whether with or without identifying research participants)
+        </small>
+    </label>
+    <textarea id="publishInformation"
+              name="publishInformation"
+              rows="4"></textarea>
+</div>
+
+<!-- 21 -->
+<div class="form-group">
+    <label>
+        21. Provide details of the compliance with Applicable Data Protection Laws
+    </label>
+    <textarea id="dataProtectionLaws"
+              name="dataProtectionLaws"
+              rows="5"></textarea>
+</div>
+
+<!-- 22 -->
+<div class="form-group">
+    <label>
+        22. If your research involves using archived/existing databases,
+        please provide the necessary documentation
+        <br>
+        <small>
+            (e.g., permissions to use those databases, if applicable)
+        </small>
+    </label>
+    <label>Q22. Upload Data Management Plan (PDF)</label>
+
+<input
+    type="file"
+    name="dataManagement22"
+    accept=".pdf"
+>
+</div>
+
+<!-- 23 -->
+<div class="form-group">
+    <label>
+        23. Will the research use AI?
+        <br>
+        <small>(Write Yes / No)</small>
+    </label>
+
+    <select id="researchAI"
+            name="researchAI">
+        <option value="">Select</option>
+        <option>Yes</option>
+        <option>No</option>
+    </select>
+</div>
+
+<!-- 24 -->
+<div class="form-group">
+    <label>
+        24. If Yes, Name of the AI Tool / Software
+    </label>
+    <input type="text"
+           id="aiTool"
+           name="aiTool">
+</div>
+
+<!-- 25 -->
+<div class="form-group">
+    <label>
+        25. If Yes, Specify the Purpose for Using the AI Tool / Software
+    </label>
+    <textarea id="aiPurpose"
+              name="aiPurpose"
+              rows="4"></textarea>
+</div>
+
+<!-- 26 -->
+<div class="form-group">
+    <label>
+        26. Explain how transparency, explainability,
+        accountability, and bias mitigation will be ensured
+        in AI or algorithmic systems used in the research
+    </label>
+    <textarea id="aiTransparency"
+              name="aiTransparency"
+              rows="6"></textarea>
+</div>
+
+<!-- 27 -->
+<div class="form-group">
+    <label>
+        27. Any other remarks not furnished above
+    </label>
+    <textarea id="otherRemarks"
+              name="otherRemarks"
+              rows="5"></textarea>
+</div>
+
+<div class="button-group">
+    <button type="button" id="prevBtn5">Previous</button>
+    <button type="button" id="nextBtn6">Next</button>
+</div>
+
+</div>
+
+<!-- STEP 7 -->
+<div class="form-step">
+
+    <h2>SECTION VII - RISK–BENEFIT ASSESSMENT</h2>
+
+    <!-- 1 -->
+    <div class="form-group">
+        <label>
+            1. Describe Potential Risks
+            <br>
+            <small>
+                (Specify Physical / Psychological / Social / Legal /
+                Privacy (Data) / Any Other)
+            </small>
+        </label>
+        <textarea id="potentialRisks"
+                  name="potentialRisks"
+                  rows="5"></textarea>
+    </div>
+
+    <!-- 2 -->
+    <div class="form-group">
+        <label>
+            2. Risk Level
+            <br>
+            <small>
+                (Specify No Risk / Minimal Risk / Low Risk /
+                More than Minimal Risk)
+            </small>
+        </label>
+
+        <select id="riskLevel" name="riskLevel">
+            <option value="">Select Risk Level</option>
+            <option>No Risk</option>
+            <option>Minimal Risk</option>
+            <option>Low Risk</option>
+            <option>More than Minimal Risk</option>
+        </select>
+    </div>
+
+    <!-- 3 -->
+    <div class="form-group">
+        <label>
+            3. Mitigation Measures
+            <br>
+            <small>
+                (Specify the measures to minimise risks)
+            </small>
+        </label>
+        <textarea id="mitigationMeasures"
+                  name="mitigationMeasures"
+                  rows="5"></textarea>
+    </div>
+
+    <!-- 4 -->
+    <div class="form-group">
+        <label>
+            4. Specify Anticipated Benefits Direct to Participants
+        </label>
+        <textarea id="directBenefits"
+                  name="directBenefits"
+                  rows="4"></textarea>
+    </div>
+
+    <!-- 5 -->
+    <div class="form-group">
+        <label>
+            5. Specify Anticipated Benefits Indirect / Societal
+        </label>
+        <textarea id="societalBenefits"
+                  name="societalBenefits"
+                  rows="4"></textarea>
+    </div>
+
+    <!-- 6 -->
+    <div class="form-group">
+        <label>
+            6. Provide the Risk–Benefit Justification
+        </label>
+        <textarea id="riskBenefitJustification"
+                  name="riskBenefitJustification"
+                  rows="6"></textarea>
+    </div>
+
+    <div class="button-group">
+        <button type="button" id="prevBtn6">Previous</button>
+        <button type="button" id="nextBtn7">Next</button>
+    </div>
+
+</div>
+
+    <!-- STEP 8 -->
+<div class="form-step">
+
+    <h2>SECTION VIII - FINANCIAL ASPECTS / REIMBURSEMENT</h2>
+
+    <!-- 1 -->
+    <div class="form-group">
+        <label>
+            1. Declare if the research is receiving any Grants/Funds
+            <br>
+            <small>(Write Yes / No)</small>
+        </label>
+
+        <select id="researchGrant" name="researchGrant">
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+    </div>
+
+    <!-- 2 -->
+    <div class="form-group">
+        <label>
+            2. If Yes, declare the source of the grant/funding
+            <br>
+            <small>
+                (Specify grant/fund name and institution providing the grant/fund)
+            </small>
+        </label>
+
+        <textarea id="grantSource"
+                  name="grantSource"
+                  rows="4"></textarea>
+    </div>
+
+    <!-- 3 -->
+    <div class="form-group">
+        <label>
+            3. Amount of Sponsorship / Grant
+            <br>
+            <small>(Specify in INR)</small>
+        </label>
+
+        <input type="text"
+               id="grantAmount"
+               name="grantAmount"
+               placeholder="Example: ₹50,000">
+    </div>
+
+    <!-- 4 -->
+    <div class="form-group">
+        <label>
+            4. Status of Grant
+            <br>
+            <small>(Approved / Pending / Not Applicable)</small>
+        </label>
+
+        <select id="grantStatus" name="grantStatus">
+            <option value="">Select</option>
+            <option>Approved</option>
+            <option>Pending</option>
+            <option>Not Applicable</option>
+        </select>
+
+        <label style="margin-top:15px;">
+            Annexure Details
+            <br>
+            <small>(Specify submitted as Annexure No. / Not Submitted)</small>
+        </label>
+
+        <label>Q4. Upload Financial/Reimbursement Details (PDF)</label>
+
+<input
+    type="file"
+    name="financial4"
+    accept=".pdf"
+>
+    </div>
+
+    <!-- 5 -->
+    <div class="form-group">
+        <label>
+            5. Provide details on who will be responsible for research-related costs
+        </label>
+
+        <textarea id="researchCostResponsibility"
+                  name="researchCostResponsibility"
+                  rows="4"></textarea>
+    </div>
+
+    <!-- 6 -->
+    <div class="form-group">
+        <label>
+            6. For sponsored research, list the costs that the sponsor will bear
+        </label>
+
+        <textarea id="sponsorCosts"
+                  name="sponsorCosts"
+                  rows="4"></textarea>
+    </div>
+
+    <!-- 7 -->
+    <div class="form-group">
+        <label>
+            7. Describe the distribution of funds/grants in collaborative research
+        </label>
+
+        <textarea id="grantDistribution"
+                  name="grantDistribution"
+                  rows="4"></textarea>
+    </div>
+
+    <!-- 8 -->
+    <div class="form-group">
+        <label>
+            8. Will research participants receive payment for participation?
+            <br>
+            <small>
+                (If Yes, please elaborate. If No, please state "No reimbursement")
+            </small>
+        </label>
+
+        <textarea id="participantPayment"
+                  name="participantPayment"
+                  rows="4"></textarea>
+    </div>
+
+    <!-- 9 -->
+    <div class="form-group">
+        <label>
+            9. Will the student research participant receive student course credits for participation?
+            <br>
+            <small>
+                (If Yes, please elaborate. If No, please state "No reimbursement")
+            </small>
+        </label>
+
+        <textarea id="studentCredits"
+                  name="studentCredits"
+                  rows="4"></textarea>
+    </div>
+
+    <!-- 10 -->
+    <div class="form-group">
+        <label>
+            10. The financial benefits or other benefits derived from this study to the PI/Co-I(s)/School/Institution (if any)
+        </label>
+
+        <textarea id="financialBenefits"
+                  name="financialBenefits"
+                  rows="5"></textarea>
+    </div>
+
+    <div class="button-group">
+        <button type="button" id="prevBtn7">Previous</button>
+        <button type="button" id="nextBtn8">Next</button>
+    </div>
+
+</div>
+
+    <!-- STEP 9 -->
+<div class="form-step">
+
+    <h2>SECTION IX - CONFLICT OF INTEREST DECLARATION</h2>
+
+    <!-- 1 -->
+    <div class="form-group">
+        <label>
+            1. No conflict of interest exists.
+            <br>
+            <small>(Write Yes / No)</small>
+        </label>
+
+        <select id="noConflictInterest" name="noConflictInterest">
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+    </div>
+
+    <!-- 2 -->
+    <div class="form-group">
+        <label>
+            2. Conflict of interest exists
+            <br>
+            <small>(Please specify details and mitigation measures)</small>
+        </label>
+
+        <textarea id="conflictInterestDetails"
+                  name="conflictInterestDetails"
+                  rows="5"
+                  placeholder="Specify the conflict of interest and the mitigation measures, if applicable"></textarea>
+    </div>
+
+    <div class="button-group">
+        <button type="button" id="prevBtn8">Previous</button>
+        <button type="button" id="nextBtn9">Next</button>
+    </div>
+
+</div>
+
+
+    <!-- STEP 10 -->
+<div class="form-step">
+
+    <h2>SECTION X - ANNEXURE CHECKLIST</h2>
+
+    <h3>1. List of Mandatory Annexures Submitted with the Application for Ethical Review Consideration</h3>
+
+    <!-- Research Proposal -->
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="researchProposal" name="researchProposal">
+            Research Proposal (Full Proposal)
+        </label>
+        <input type="text"
+               id="researchProposalAnnexure" name="researchProposalAnnexure"
+               placeholder="Annexure No.">
+    </div>
+
+    <!-- RAC Approval -->
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="racApproval" name="racApproval">
+            RAC Approval of Research Design and Data Collection Protocol
+            (For Research Scholars)
+        </label>
+        <input type="text"
+               id="racApprovalAnnexure" name="racApprovalAnnexure"
+               placeholder="Annexure No.">
+    </div>
+
+    <!-- Participant Information Sheet -->
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="participantSheet" name="participantSheet">
+            Participant Information Sheet
+        </label>
+        <input type="text"
+               id="participantSheetAnnexure" name="participantSheetAnnexure"
+               placeholder="Annexure No.">
+    </div>
+
+    <!-- Consent Form -->
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="consentForm" name="consentForm">
+            Consent Form
+        </label>
+        <input type="text"
+               id="consentFormAnnexure" name="consentFormAnnexure"
+               placeholder="Annexure No.">
+    </div>
+
+    <!-- Assent Form -->
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="assentForm" name="assentForm">
+            Assent Form
+        </label>
+        <input type="text"
+               id="assentFormAnnexure" name="assentFormAnnexure"
+               placeholder="Annexure No.">
+    </div>
+
+    <!-- Recruitment Materials -->
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="recruitmentMaterial" name="recruitmentMaterial">
+            Recruitment Materials
+        </label>
+        <input type="text"
+               id="recruitmentAnnexure" name="recruitmentAnnexure"
+               placeholder="Annexure No.">
+    </div>
+
+    <!-- Tools -->
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="toolsQuestionnaire" name="toolsQuestionnaire">
+            Tools / Questionnaires
+        </label>
+        <input type="text"
+               id="toolsAnnexure" name="toolsAnnexure"
+               placeholder="Annexure No.">
+    </div>
+
+    <!-- Permissions -->
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="permissionLetters" name="permissionLetters">
+            Permissions / Gatekeeper Letters
+        </label>
+        <input type="text"
+               id="permissionAnnexure" name="permissionAnnexure"
+               placeholder="Annexure No.">
+    </div>
+
+    <!-- Plagiarism -->
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="plagiarismReport" name="plagiarismReport">
+            Plagiarism & AI Detection Report
+        </label>
+        <input type="text"
+               id="plagiarismAnnexure" name="plagiarismAnnexure"
+               placeholder="Annexure No.">
+    </div>
+
+    <!-- Funding -->
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="fundingApproval" name="fundingApproval">
+            Funding / Grant Approval
+        </label>
+        <input type="text"
+               id="fundingAnnexure" name="fundingAnnexure"
+               placeholder="Annexure No.">
+    </div>
+
+    <!-- Animal -->
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="animalApproval" name="animalApproval">
+            Animal / Biosafety / Regulatory Approvals (If Applicable)
+        </label>
+        <input type="text"
+               id="animalAnnexure" name="animalAnnexure"
+               placeholder="Annexure No.">
+    </div>
+
+    <!-- Other -->
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="otherAnnexure" name="otherAnnexure">
+            Any Other (Specify)
+        </label>
+        <input type="text"
+               id="otherAnnexureDetails" name="otherAnnexureDetails"
+               placeholder="Annexure No(s).">
+    </div>
+
+    <!-- Question 2 -->
+    <div class="form-group">
+        <label>
+            2. List Documents Not Submitted
+        </label>
+        <textarea id="documentsNotSubmitted" name="documentsNotSubmitted"
+                  rows="5"
+                  placeholder="Enter the documents that are not submitted"></textarea>
+    </div>
+
+    <div class="button-group">
+        <button type="button" id="prevBtn9">Previous</button>
+        <button type="button" id="nextBtn10">Next</button>
+    </div>
+
+</div>
+
+
+    <!-- STEP 11 -->
+<div class="form-step">
+
+    <h2>SECTION XI - DECLARATION BY THE RESEARCHER</h2>
+
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="declare1" name="declare1">
+            1. I declare that the research project proposal submitted is original,
+            free from plagiarism, and not substantially or entirely AI-generated.
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="declare2" name="declare2">
+            2. Any limited use of AI tools (if applicable) has been restricted
+            to permissible academic support (e.g., grammar correction,
+            formatting, and reference management) and has been duly acknowledged.
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="declare3" name="declare3">
+            3. I undertake full responsibility for the authenticity,
+            accuracy, and integrity of the proposal.
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="declare4" name="declare4">
+            4. I will adhere to VU-REC guidelines and uphold the highest
+            standards of ethical and responsible research throughout the project.
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="declare5" name="declare5">
+            5. I declare that no part of the project data collection is initiated
+            before receiving approval from the VU-REC.
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="declare6" name="declare6">
+            6. I understand that, at any stage, if the VU-REC finds that my
+            proposal violates research integrity, the VU-REC reserves the right
+            to revoke the ethical clearance granted.
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="declare7" name="declare7">
+            7. I undertake to inform the VU-REC of any protocol amendments
+            or deviations and to obtain prior approval where required.
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="declare8" name="declare8">
+            8. I agree to submit periodic progress reports to the VU-REC
+            as required (annual or as specified by the Committee).
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="declare9" name="declare9">
+            9. I certify that the information provided is accurate and
+            I will adhere to VU-REC guidelines.
+        </label>
+    </div>
+
+    <hr>
+
+    <h3>Principal Investigator</h3>
+
+    <div class="form-group">
+        <label>Signature of the Principal Investigator with Date</label>
+        <input type="text"
+               id="piSignature" name="piSignature"
+               placeholder="Type Full Name with Date">
+    </div>
+
+    <div class="form-group">
+        <label>Name of the Principal Investigator</label>
+        <input type="text"
+               id="piName" name="piName">
+    </div>
+
+    <hr>
+
+    <h3>Supervisor (For PhD Research Scholar)</h3>
+
+    <div class="form-group">
+        <label>Comments of the Supervisor</label>
+        <textarea id="supervisorComments" name="supervisorComments"
+                  rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Signature of the Supervisor with Date</label>
+        <input type="text"
+               id="supervisorSignature" name="supervisorSignature">
+    </div>
+
+    <div class="form-group">
+        <label>Name of the Supervisor</label>
+        <input type="text"
+               id="supervisorName" name="supervisorName">
+    </div>
+
+    <hr>
+
+    <h3>RAC Chairperson (For PhD Research Scholar)</h3>
+
+    <div class="form-group">
+        <label>Comments of the RAC Chairperson</label>
+        <textarea id="racComments" name="racComments"
+                  rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Signature of the RAC Chairperson with Date</label>
+        <input type="text"
+               id="racSignature" name="racSignature">
+    </div>
+
+    <div class="form-group">
+        <label>Name of the RAC Chairperson</label>
+        <input type="text"
+               id="racName" name="racName">
+    </div>
+
+    <hr>
+
+    <h3>Program Chair</h3>
+
+    <div class="form-group">
+        <label>
+            Signature of the Program Chair with Name and Date
+            <br>
+            <small>(In case of receiving seed funding from the University)</small>
+        </label>
+
+        <input type="text"
+               id="programChairSignature" name="programChairSignature">
+    </div>
+
+    <hr>
+
+    <h3>Chairperson, R&IC</h3>
+
+    <div class="form-group">
+        <label>
+            Signature of the Chairperson, R&IC with Name and Date
+        </label>
+
+        <input type="text"
+               id="ricSignature" name="ricSignature">
+    </div>
+
+    <div class="button-group">
+        <button type="button" id="prevBtn10">Previous</button>
+
+        <button type="submit" id="submitBtn">
+            Submit Application
+        </button>
+    </div>
+
+</div>
+
+    
+
+</div>
+</form>
+
+
+    <script src="../js/application.js"></script>
+
+</body>
+</html>

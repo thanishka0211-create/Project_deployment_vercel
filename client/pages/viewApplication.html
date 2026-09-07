@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Research Ethics Application</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div>
+            <h1>Research Ethics Committee Portal</h1>
+            <p>Application Details</p>
+        </div>
+
+        <button onclick="history.back()" class="logout-btn">
+            Back
+        </button>
+    </header>
+
+    <!-- Main Container -->
+    <div class="view-application-container">
+
+        <h1 class="page-title">Research Ethics Committee Application</h1>
+
+        <!-- THIS IS THE ONLY CONTAINER NEEDED -->
+        <div id="applicationContainer">
+
+            <div class="loading-box">
+                <h3>Loading application...</h3>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ========================================= -->
+<!-- REVIEWER DECISION SECTION -->
+<!-- ========================================= -->
+
+<div id="reviewerSection" class="committee-section" style="display:none;">
+
+    <h2 style="color:#8B0000;">Reviewer Evaluation</h2>
+
+    <label><strong>Decision</strong></label><br><br>
+
+    <label>
+        <input type="radio" name="reviewerStatus" value="Approved">
+        Approve
+    </label>
+
+    <label style="margin-left:25px;">
+        <input type="radio" name="reviewerStatus" value="Rejected">
+        Reject
+    </label>
+
+    <br><br>
+
+    <label><strong>Reviewer Comments</strong></label>
+
+    <textarea
+        id="reviewerComment"
+        rows="5"
+        placeholder="Enter reviewer comments here..."
+        style="width:100%; margin-top:10px;">
+    </textarea>
+
+    <br><br>
+
+    <button id="submitReviewerDecision" class="submit-btn">
+        Submit Review
+    </button>
+
+</div>
+
+    <!-- Reviewer / Secretary / Chairperson JS -->
+    <script src="../js/viewApplication.js"></script>
+
+</body>
+
+</html>

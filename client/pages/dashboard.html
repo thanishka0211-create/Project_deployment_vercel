@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Researcher Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="dashboard-page">
+
+<div class="dashboard-container">
+
+  <h1>Researcher Dashboard</h1>
+  <p>Welcome! Choose an option below.</p>
+
+  <div class="dashboard-cards">
+
+    <div class="dashboard-card" onclick="location.href='application.html'">
+      <h2>📝 New Application</h2>
+      <p>Submit a new Research Ethics Committee application.</p>
+    </div>
+
+    <div class="dashboard-card" onclick="location.href='myApplications.html'">
+      <h2>📂 My Applications</h2>
+      <p>View all submitted applications and their approval status.</p>
+    </div>
+
+    <div class="dashboard-card logout" onclick="logout()">
+      <h2>🚪 Logout</h2>
+      <p>Sign out and return to the login page.</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function logout() {
+  localStorage.removeItem("token");
+  localStorage.removeItem("user_id");
+  localStorage.removeItem("role");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

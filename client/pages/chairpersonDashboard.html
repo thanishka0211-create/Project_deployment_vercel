@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Chairperson Dashboard</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+<div class="chairperson-container">
+
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+    <div class="chairperson-header">
+
+        <div>
+
+            <h1>
+                Chairperson Dashboard
+            </h1>
+
+            <p>
+                Research Ethics Committee Portal
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="logoutBtn"
+        >
+            Logout
+        </button>
+
+    </div>
+
+
+    <!-- ========================================
+         APPLICATIONS
+    ========================================= -->
+
+    <div class="chairperson-card">
+
+        <h2>
+            Applications for Final Review
+        </h2>
+
+
+        <div class="table-responsive">
+
+            <table class="chairperson-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Application ID</th>
+
+                        <th>Project Title</th>
+
+                        <th>Principal Investigator</th>
+
+                        <th>Department</th>
+
+                        <th>Status</th>
+
+                        <th>Reviewer Decision</th>
+
+                        <th>Member Secretary Decision</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="chairpersonTableBody">
+
+                    <tr>
+
+                        <td
+                            colspan="8"
+                            style="text-align:center;"
+                        >
+                            Loading applications...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="../js/chairpersonDashboard.js"></script>
+
+</body>
+
+</html>

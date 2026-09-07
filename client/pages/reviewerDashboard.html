@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviewer Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <h1>Reviewer Dashboard</h1>
+
+    <table border="1" cellpadding="10">
+
+        <thead>
+
+            <tr>
+                <th>Application ID</th>
+                <th>Project Title</th>
+                <th>Principal Investigator</th>
+                <th>Department</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="reviewerTableBody">
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <button onclick="window.location.href='dashboard.html'">
+        Back to Dashboard
+    </button>
+
+    <script src="../js/reviewerDashboard.js"></script>
+
+</body>
+
+</html>

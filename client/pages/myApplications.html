@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Applications - Research Ethics Portal</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="applications-page">
+
+
+        <!-- HEADER -->
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Research Ethics Portal
+                </h1>
+
+                <p>
+                    My Applications
+                </p>
+
+            </div>
+
+
+            <button
+                class="logout-btn"
+                onclick="window.location.href='dashboard.html'"
+            >
+                Dashboard
+            </button>
+
+        </header>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="applications-container">
+
+
+            <div class="page-heading">
+
+                <h2>
+                    My Applications
+                </h2>
+
+                <p>
+                    View and track all your submitted
+                    research ethics applications.
+                </p>
+
+            </div>
+
+
+
+            <!-- APPLICATION TABLE -->
+
+            <div class="table-wrapper">
+
+                <table class="applications-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Application ID
+                            </th>
+
+                            <th>
+                                Project Title
+                            </th>
+
+                            <th>
+                                Principal Investigator
+                            </th>
+
+                            <th>
+                                Department
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody
+                        id="applicationTableBody"
+                    >
+
+                        <!-- Applications will be loaded here -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- BACK BUTTON -->
+
+            <div class="back-section">
+
+                <button
+                    class="back-dashboard"
+                    onclick="window.location.href='dashboard.html'"
+                >
+                    ← Back to Dashboard
+                </button>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- EXISTING JS -->
+
+    <script src="../js/myApplications.js"></script>
+
+
+</body>
+
+</html>

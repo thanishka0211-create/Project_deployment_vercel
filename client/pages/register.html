@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VU-REC | Register</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="auth-page">
+
+<div class="auth-container">
+
+    <!-- LEFT SIDE -->
+    <div class="auth-brand">
+
+        <img
+            src="../images/vu-logo.png"
+            alt="Vidyashilp University Logo"
+            class="auth-logo"
+        >
+
+        <h1>VU-REC</h1>
+
+        <h2>
+            Research Ethics Committee Portal
+        </h2>
+
+        <p>
+            Vidyashilp University
+        </p>
+
+        <p class="auth-description">
+            Create your account and access the
+            Research Ethics Committee Portal
+            according to your assigned role.
+        </p>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="auth-form-section">
+
+        <h2>Create Account</h2>
+
+        <p class="auth-subtitle">
+            Register to access the Research Ethics Portal
+        </p>
+
+
+        <form id="registerForm">
+
+            <!-- FULL NAME -->
+            <div class="auth-field">
+
+                <label for="fullName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="auth-field">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- ROLE -->
+            <div class="auth-field">
+
+                <label for="role">
+                    Select Role
+                </label>
+
+                <select id="role" required>
+
+                    <option value="">
+                        Select your role
+                    </option>
+
+                    <option value="Researcher">
+                        Researcher
+                    </option>
+
+                    <option value="Reviewer">
+                        Reviewer
+                    </option>
+
+                    <option value="Member Secretary">
+                        Member Secretary
+                    </option>
+
+                    <option value="Chairperson">
+                        Chairperson
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+            <div class="auth-field">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Create a password"
+                    minlength="6"
+                    required
+                >
+
+            </div>
+
+
+            <!-- CONFIRM PASSWORD -->
+            <div class="auth-field">
+
+                <label for="confirmPassword">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Re-enter your password"
+                    minlength="6"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="auth-button"
+            >
+                Create Account
+            </button>
+
+        </form>
+
+
+        <p class="auth-register-text">
+
+            Already have an account?
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </p>
+
+
+        <p class="auth-home-link">
+
+            <a href="index.html">
+                ← Back to Home
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="../js/register.js"></script>
+
+</body>
+</html>

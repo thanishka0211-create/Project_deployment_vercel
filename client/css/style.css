@@ -1,0 +1,2052 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    background:#8B0000;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+}
+
+.logo h2{
+    color:white;
+}
+
+.logo p{
+    color:white;
+    font-size:14px;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.navbar ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.navbar ul li a:hover{
+    color:#FFD700;
+}
+
+.register-btn{
+    background:white;
+    color:#8B0000 !important;
+    padding:10px 20px;
+    border-radius:30px;
+}
+
+/* Hero */
+
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("../images/hero.jpg") center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero h3{
+    margin-bottom:20px;
+    color:#FFD700;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:14px 30px;
+    background:#8B0000;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#b30000;
+}
+
+.secondary-btn{
+    background:white;
+    color:#8B0000;
+}
+
+/* Sections */
+
+section{
+    padding:70px 80px;
+}
+
+section h2{
+    text-align:center;
+    color:#8B0000;
+    margin-bottom:30px;
+    font-size:36px;
+}
+
+section h3{
+    margin-top:25px;
+    color:#8B0000;
+}
+
+section ul{
+    margin-left:25px;
+    margin-top:20px;
+}
+
+section ul li{
+    margin-bottom:10px;
+}
+
+/* Committee */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:30px;
+}
+
+table th{
+    background:#8B0000;
+    color:white;
+    padding:15px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:15px;
+}
+
+table tr:nth-child(even){
+    background:#f2f2f2;
+}
+
+/* Resources */
+
+.resource-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:30px;
+}
+
+.resource-card{
+    background:white;
+    border-radius:12px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.resource-card:hover{
+    transform:translateY(-8px);
+}
+
+.resource-card i{
+    font-size:60px;
+    color:red;
+    margin-bottom:20px;
+}
+
+.resource-card h3{
+    margin-bottom:20px;
+}
+
+.resource-card a{
+    text-decoration:none;
+    background:#8B0000;
+    color:white;
+    padding:10px 20px;
+    border-radius:25px;
+}
+
+/* Contact */
+
+#contact{
+    background:#8B0000;
+    color:white;
+    text-align:center;
+}
+
+#contact h2{
+    color:white;
+}
+
+#contact p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    padding:20px;
+}
+
+.navbar ul{
+    flex-direction:column;
+    margin-top:20px;
+    gap:15px;
+}
+
+.hero h1{
+    font-size:35px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+section{
+    padding:40px 20px;
+}
+
+}
+.stats{
+    background:#f7f7f7;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.stats h2{
+    color:#b71c1c;
+    margin-bottom:40px;
+}
+
+.stats-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.stat-card{
+    background:white;
+    width:220px;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.stat-card h3{
+    color:#b71c1c;
+    font-size:36px;
+}
+
+.stat-card p{
+    margin-top:10px;
+    color:#555;
+}
+.form-step{
+    display: none;
+}
+
+.form-step.active{
+    display: block;
+}
+.progress-container{
+    width:100%;
+    height:10px;
+    background:#ddd;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.progress-bar{
+    width:9%;
+    height:100%;
+    background:#8B0000;
+    border-radius:10px;
+    transition:0.4s;
+}
+
+#stepIndicator{
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+/* =====================================================
+   RESEARCH ETHICS APPLICATION FORM
+   ===================================================== */
+
+/* Application page heading */
+body > h1{
+    max-width:1200px;
+    margin:35px auto 15px;
+    padding:0 25px;
+    color:#8B0000;
+    text-align:center;
+    font-size:32px;
+    font-weight:700;
+}
+
+/* Main application form */
+#applicationForm{
+    max-width:1200px;
+    margin:25px auto 60px;
+    padding:35px 45px;
+    background:#ffffff;
+    border-radius:14px;
+    box-shadow:0 5px 25px rgba(0,0,0,0.10);
+    border-top:5px solid #8B0000;
+}
+
+/* Progress bar */
+.progress-container{
+    max-width:1200px;
+    width:calc(100% - 40px);
+    height:12px;
+    margin:20px auto 12px;
+    background:#e4e4e4;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    width:9%;
+    height:100%;
+    background:#8B0000;
+    border-radius:20px;
+    transition:width 0.4s ease;
+}
+
+/* Step text */
+#stepIndicator{
+    text-align:center;
+    color:#8B0000;
+    font-size:17px;
+    font-weight:700;
+    margin:12px 0 25px;
+}
+
+/* Hide inactive steps */
+.form-step{
+    display:none;
+}
+
+/* Show current step */
+.form-step.active{
+    display:block;
+}
+
+/* Section heading */
+.form-step h2{
+    background:#8B0000;
+    color:white;
+    padding:15px 20px;
+    margin-bottom:25px;
+    border-radius:8px;
+    font-size:22px;
+    letter-spacing:.3px;
+}
+
+/* Sub headings */
+.form-step h3{
+    color:#8B0000;
+    margin:20px 0 15px;
+    font-size:18px;
+}
+
+/* Each question */
+.form-group{
+    background:#fafafa;
+    border:1px solid #e3e3e3;
+    border-left:4px solid #8B0000;
+    border-radius:7px;
+    padding:18px 20px;
+    margin-bottom:18px;
+    transition:0.2s ease;
+}
+
+.form-group:hover{
+    background:#fff;
+    box-shadow:0 3px 12px rgba(0,0,0,0.06);
+}
+
+/* Question labels */
+.form-group > label{
+    display:block;
+    font-size:16px;
+    font-weight:600;
+    color:#2f2f2f;
+    margin-bottom:8px;
+}
+
+/* Explanation text */
+.form-group small{
+    display:block;
+    margin-top:4px;
+    margin-bottom:8px;
+    color:#666;
+    font-size:14px;
+    font-weight:400;
+    font-style:italic;
+}
+
+/* Text inputs, dropdowns, dates etc. */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:11px 13px;
+    margin-top:7px;
+    border:1px solid #cfcfcf;
+    border-radius:6px;
+    background:white;
+    color:#333;
+    font-size:15px;
+    font-family:'Segoe UI',sans-serif;
+    outline:none;
+    transition:border-color .2s, box-shadow .2s;
+}
+
+/* Textareas */
+.form-group textarea{
+    resize:vertical;
+    min-height:90px;
+}
+
+/* Focus effect */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#8B0000;
+    box-shadow:0 0 0 3px rgba(139,0,0,0.10);
+}
+
+/* Placeholder */
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+    color:#999;
+}
+
+/* Required star */
+.required{
+    color:#c00000;
+    font-weight:bold;
+}
+
+/* Checkbox styling */
+.form-group input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    margin-right:8px;
+    vertical-align:middle;
+    accent-color:#8B0000;
+    cursor:pointer;
+}
+
+/* Don't make checkbox labels unnecessarily bold */
+.form-group label:has(input[type="checkbox"]){
+    cursor:pointer;
+}
+
+/* Previous / Next button area */
+.button-group{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid #e2e2e2;
+}
+
+/* All form navigation buttons */
+.button-group button{
+    min-width:130px;
+    border:none;
+    border-radius:7px;
+    padding:12px 25px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+/* Previous buttons */
+.button-group button:first-child{
+    background:#e7e7e7;
+    color:#333;
+}
+
+.button-group button:first-child:hover{
+    background:#d5d5d5;
+}
+
+/* Next button */
+.button-group button:last-child{
+    background:#8B0000;
+    color:white;
+}
+
+.button-group button:last-child:hover{
+    background:#a50000;
+    transform:translateY(-1px);
+    box-shadow:0 4px 10px rgba(139,0,0,.25);
+}
+
+/* When a step contains only one button (Step 1) */
+.button-group button:only-child{
+    margin-left:auto;
+    background:#8B0000;
+    color:white;
+}
+
+/* File upload */
+.form-group input[type="file"]{
+    cursor:pointer;
+    background:#fff;
+}
+
+/* Select dropdown */
+.form-group select{
+    cursor:pointer;
+}
+
+/* Declaration section */
+.form-step label input[type="checkbox"] + span{
+    line-height:1.6;
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE APPLICATION FORM
+   ===================================================== */
+
+@media(max-width:768px){
+
+    body > h1{
+        font-size:24px;
+        margin-top:25px;
+        padding:0 15px;
+    }
+
+    #applicationForm{
+        width:calc(100% - 20px);
+        padding:22px 16px;
+        margin:20px auto 40px;
+    }
+
+    .progress-container{
+        width:calc(100% - 20px);
+    }
+
+    .form-step h2{
+        font-size:18px;
+        padding:13px 15px;
+    }
+
+    .form-group{
+        padding:15px;
+    }
+
+    .form-group > label{
+        font-size:15px;
+    }
+
+    .button-group{
+        flex-direction:column;
+    }
+
+    .button-group button{
+        width:100%;
+    }
+
+    .button-group button:only-child{
+        margin-left:0;
+    }
+}
+/* =====================================================
+   VIEW APPLICATION PAGE
+   ===================================================== */
+
+.view-application-container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto 60px;
+    background:#ffffff;
+    padding:35px 45px;
+    border-radius:14px;
+    box-shadow:0 5px 25px rgba(0,0,0,0.10);
+    border-top:5px solid #8B0000;
+}
+
+
+/* Main page title */
+
+.view-application-container > h1{
+    text-align:center;
+    color:#8B0000;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+
+/* Application number */
+
+#applicationNumber{
+    text-align:center;
+    color:#555;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+
+/* =====================================================
+   APPLICATION SUMMARY
+   ===================================================== */
+
+.application-summary{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:15px 25px;
+
+    background:#fafafa;
+
+    padding:25px;
+
+    border:1px solid #e2e2e2;
+    border-left:5px solid #8B0000;
+
+    border-radius:8px;
+
+    margin-bottom:30px;
+}
+
+
+.application-summary p{
+    margin:0;
+    padding:12px 15px;
+
+    background:white;
+
+    border:1px solid #e5e5e5;
+
+    border-radius:6px;
+
+    font-size:15px;
+}
+
+
+.application-summary strong{
+    color:#8B0000;
+    margin-right:6px;
+}
+
+
+.application-summary span{
+    color:#333;
+}
+
+
+/* Status */
+
+#applicationStatus{
+    display:inline-block;
+
+    padding:4px 12px;
+
+    background:#fff3cd;
+
+    color:#856404;
+
+    border-radius:20px;
+
+    font-weight:600;
+}
+
+
+/* Divider */
+
+.view-application-container hr{
+    border:none;
+    border-top:1px solid #ddd;
+
+    margin:30px 0;
+}
+
+
+/* =====================================================
+   SUBMITTED APPLICATION DETAILS
+   ===================================================== */
+
+.view-application-container > h2{
+    color:#8B0000;
+}
+
+
+/* Submitted Application Details heading */
+
+.view-application-container > hr + h2{
+    background:#8B0000;
+
+    color:white;
+
+    padding:14px 20px;
+
+    border-radius:7px;
+
+    margin-bottom:20px;
+
+    font-size:21px;
+}
+
+
+/* Container where JS loads all 11 steps */
+
+#applicationAnswers{
+    margin-top:20px;
+}
+
+
+/* Every answer generated by viewApplication.js */
+
+#applicationAnswers > div{
+    background:#fafafa;
+
+    border:1px solid #e2e2e2;
+
+    border-left:4px solid #8B0000;
+
+    border-radius:7px;
+
+    padding:16px 20px;
+
+    margin-bottom:15px;
+
+    transition:0.2s ease;
+}
+
+
+#applicationAnswers > div:hover{
+    background:#ffffff;
+
+    box-shadow:0 3px 12px rgba(0,0,0,0.07);
+}
+
+
+/* Question */
+
+#applicationAnswers strong{
+    display:block;
+
+    color:#8B0000;
+
+    font-size:15px;
+
+    margin-bottom:7px;
+}
+
+
+/* Answer */
+
+#applicationAnswers p{
+    color:#444;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    word-break:break-word;
+}
+
+
+/* =====================================================
+   SECTION HEADINGS
+   If viewApplication.js creates h2/h3 headings
+   ===================================================== */
+
+#applicationAnswers h2,
+#applicationAnswers h3{
+
+    background:#8B0000;
+
+    color:white;
+
+    padding:13px 18px;
+
+    border-radius:7px;
+
+    margin:28px 0 18px;
+
+    font-size:19px;
+}
+
+
+/* First section heading */
+
+#applicationAnswers h2:first-child,
+#applicationAnswers h3:first-child{
+    margin-top:0;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+   ===================================================== */
+
+.view-application-container > button{
+
+    display:block;
+
+    margin:35px auto 5px;
+
+    border:none;
+
+    background:#8B0000;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:7px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.25s;
+}
+
+
+.view-application-container > button:hover{
+
+    background:#a50000;
+
+    transform:translateY(-1px);
+
+    box-shadow:0 4px 10px rgba(139,0,0,.25);
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+   ===================================================== */
+
+@media(max-width:768px){
+
+    .view-application-container{
+
+        width:95%;
+
+        margin:20px auto 40px;
+
+        padding:25px 15px;
+    }
+
+
+    .view-application-container > h1{
+
+        font-size:23px;
+    }
+
+
+    #applicationNumber{
+
+        font-size:17px;
+    }
+
+
+    .application-summary{
+
+        grid-template-columns:1fr;
+
+        padding:15px;
+
+        gap:10px;
+    }
+
+
+    #applicationAnswers > div{
+
+        padding:14px;
+    }
+
+
+    #applicationAnswers h2,
+    #applicationAnswers h3{
+
+        font-size:17px;
+
+        padding:12px 14px;
+    }
+
+
+    .view-application-container > button{
+
+        width:100%;
+    }
+
+}
+/* =====================================================
+   REVIEWER EVALUATION
+   ===================================================== */
+
+#reviewerReviewSection{
+    margin-top:40px;
+}
+
+#reviewerReviewSection > h2{
+    background:#8B0000;
+    color:white;
+    padding:14px 20px;
+    border-radius:7px;
+    margin:20px 0;
+    font-size:21px;
+}
+
+.reviewer-review-box{
+    background:#fafafa;
+    border:1px solid #e1e1e1;
+    border-left:5px solid #8B0000;
+    border-radius:8px;
+    padding:25px;
+}
+
+.review-field{
+    margin-bottom:22px;
+}
+
+.review-field label{
+    display:block;
+    color:#333;
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.review-field textarea,
+.review-field select{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    background:white;
+    font-family:'Segoe UI',sans-serif;
+    font-size:15px;
+    outline:none;
+}
+
+.review-field textarea{
+    resize:vertical;
+    min-height:130px;
+}
+
+.review-field textarea:focus,
+.review-field select:focus{
+    border-color:#8B0000;
+    box-shadow:0 0 0 3px rgba(139,0,0,0.10);
+}
+
+#submitReviewBtn{
+    border:none;
+    background:#8B0000;
+    color:white;
+    padding:12px 28px;
+    border-radius:7px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+#submitReviewBtn:hover{
+    background:#a50000;
+    transform:translateY(-1px);
+    box-shadow:0 4px 10px rgba(139,0,0,.25);
+}
+/* =========================================
+   APPLICANT REVIEW RESULT
+========================================= */
+
+#reviewResultSection{
+    margin:30px 0;
+}
+
+#reviewResultSection h2{
+    background:#8B0000;
+    color:white;
+    padding:14px 20px;
+    border-radius:7px;
+    margin-bottom:15px;
+}
+
+.review-result-box{
+    background:#fff;
+    border:1px solid #ddd;
+    border-left:5px solid #8B0000;
+    border-radius:8px;
+    padding:22px;
+}
+
+.review-result-box p{
+    margin-bottom:12px;
+    font-size:16px;
+}
+
+.review-comments-display{
+    background:#f5f5f5;
+    border:1px solid #ddd;
+    border-radius:6px;
+    padding:15px;
+    min-height:60px;
+    white-space:pre-wrap;
+}
+/* =====================================================
+   MEMBER SECRETARY DASHBOARD
+   ===================================================== */
+
+.member-secretary-container{
+    width:92%;
+    max-width:1300px;
+    margin:40px auto;
+}
+
+
+.member-secretary-header{
+    background:#8B0000;
+    color:white;
+
+    padding:25px 30px;
+
+    border-radius:10px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:25px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
+}
+
+
+.member-secretary-header h1{
+    margin:0;
+    font-size:28px;
+}
+
+
+.member-secretary-header p{
+    margin-top:5px;
+    opacity:.9;
+}
+
+
+#logoutBtn{
+    border:none;
+
+    background:white;
+    color:#8B0000;
+
+    padding:10px 20px;
+
+    border-radius:6px;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+
+.member-secretary-card{
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    box-shadow:0 4px 18px rgba(0,0,0,.10);
+}
+
+
+.member-secretary-card h2{
+    color:#8B0000;
+
+    margin-bottom:25px;
+}
+
+
+.table-responsive{
+    overflow-x:auto;
+}
+
+
+.member-secretary-table{
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+
+.member-secretary-table th{
+    background:#8B0000;
+    color:white;
+
+    padding:14px;
+
+    text-align:left;
+}
+
+
+.member-secretary-table td{
+    padding:14px;
+
+    border-bottom:1px solid #ddd;
+}
+
+
+.member-secretary-table tr:hover{
+    background:#fafafa;
+}
+
+
+.status-badge{
+    display:inline-block;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    background:#fff3cd;
+
+    color:#856404;
+
+    font-weight:600;
+}
+
+
+.view-btn{
+    border:none;
+
+    background:#8B0000;
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-weight:600;
+}
+
+
+.view-btn:hover{
+    background:#a50000;
+}
+
+
+@media(max-width:768px){
+
+    .member-secretary-header{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .member-secretary-card{
+        padding:15px;
+    }
+
+}
+/* =====================================================
+   CHAIRPERSON DASHBOARD
+===================================================== */
+
+.chairperson-container{
+    width:94%;
+    max-width:1400px;
+    margin:40px auto;
+}
+
+.chairperson-header{
+    background:#8B0000;
+    color:white;
+    padding:25px 30px;
+    border-radius:10px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:25px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
+}
+
+.chairperson-header h1{
+    margin:0;
+    font-size:28px;
+}
+
+.chairperson-header p{
+    margin-top:5px;
+    opacity:.9;
+}
+
+.chairperson-header #logoutBtn{
+    border:none;
+    background:white;
+    color:#8B0000;
+
+    padding:10px 20px;
+    border-radius:6px;
+
+    font-weight:600;
+    cursor:pointer;
+}
+
+.chairperson-card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+
+    box-shadow:0 4px 18px rgba(0,0,0,.10);
+}
+
+.chairperson-card h2{
+    color:#8B0000;
+    margin-bottom:25px;
+}
+
+.chairperson-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.chairperson-table th{
+    background:#8B0000;
+    color:white;
+    padding:14px;
+    text-align:left;
+}
+
+.chairperson-table td{
+    padding:14px;
+    border-bottom:1px solid #ddd;
+}
+
+.chairperson-table tr:hover{
+    background:#fafafa;
+}
+
+@media(max-width:768px){
+
+    .chairperson-header{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .chairperson-card{
+        padding:15px;
+    }
+
+}
+/* =========================================
+   LOGIN / AUTHENTICATION PAGE
+========================================= */
+
+.auth-page {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f5f5,
+            #eeeeee
+        );
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* MAIN LOGIN CARD */
+
+.auth-container {
+
+    width: 900px;
+    max-width: 92%;
+
+    min-height: 520px;
+
+    display: flex;
+
+    background: white;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.auth-brand {
+
+    width: 45%;
+
+    padding: 50px 40px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b0000,
+            #b71c1c
+        );
+
+    color: white;
+}
+
+
+.auth-logo {
+
+    width: 90px;
+    height: auto;
+
+    margin-bottom: 20px;
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 8px;
+}
+
+
+.auth-brand h1 {
+
+    margin: 5px 0;
+
+    font-size: 38px;
+
+    color: white;
+}
+
+
+.auth-brand h2 {
+
+    margin: 10px 0;
+
+    font-size: 22px;
+
+    color: white;
+}
+
+
+.auth-brand > p {
+
+    color: #ffffff;
+}
+
+
+.auth-description {
+
+    margin-top: 25px;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    color: #f5f5f5;
+}
+
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.auth-form-section {
+
+    width: 55%;
+
+    padding: 55px 55px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.auth-form-section h2 {
+
+    margin: 0;
+
+    color: #8b0000;
+
+    font-size: 30px;
+}
+
+
+.auth-subtitle {
+
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* FORM FIELD */
+
+.auth-field {
+
+    margin-bottom: 20px;
+}
+
+
+.auth-field label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+
+    color: #333;
+}
+
+
+.auth-field input {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.auth-field input:focus {
+
+    border-color: #a31515;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(163, 21, 21, 0.10);
+}
+
+
+/* LOGIN BUTTON */
+
+.auth-button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #9d1717;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.auth-button:hover {
+
+    background: #7f1010;
+
+    transform: translateY(-1px);
+}
+
+
+/* REGISTER */
+
+.auth-register-text {
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #555;
+}
+
+
+.auth-register-text a {
+
+    color: #9d1717;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.auth-register-text a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* HOME LINK */
+
+.auth-home-link {
+
+    margin-top: 18px;
+
+    text-align: center;
+}
+
+
+.auth-home-link a {
+
+    color: #666;
+
+    text-decoration: none;
+}
+
+
+.auth-home-link a:hover {
+
+    color: #9d1717;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .auth-container {
+
+        flex-direction: column;
+
+        margin: 25px 0;
+    }
+
+
+    .auth-brand,
+    .auth-form-section {
+
+        width: 100%;
+    }
+
+
+    .auth-brand {
+
+        padding: 35px 25px;
+    }
+
+
+    .auth-form-section {
+
+        padding: 40px 30px;
+    }
+
+
+    .auth-description {
+
+        display: none;
+    }
+
+}
+/* ========================================
+   COMMON NAVIGATION BUTTONS
+======================================== */
+
+.dashboard-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.dashboard-actions button,
+.dashboard-actions a,
+.back-button,
+.view-btn,
+.auth-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #b30000;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.dashboard-actions button:hover,
+.dashboard-actions a:hover,
+.back-button:hover,
+.view-btn:hover,
+.auth-button:hover {
+    background: #8f0000;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   SECONDARY BUTTON
+======================================== */
+
+.dashboard-actions .secondary-btn,
+.back-button {
+    background: #ffffff;
+    color: #a00000;
+    border: 2px solid #a00000;
+}
+
+.dashboard-actions .secondary-btn:hover,
+.back-button:hover {
+    background: #a00000;
+    color: white;
+}
+
+
+/* ========================================
+   LOGOUT BUTTON
+======================================== */
+
+.logout-btn {
+    padding: 11px 22px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: #a00000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   MY APPLICATIONS PAGE
+======================================== */
+
+.applications-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.applications-container h1 {
+    color: #a00000;
+    margin-bottom: 25px;
+}
+
+
+.applications-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.applications-table th {
+    background: #a00000;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+
+.applications-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.applications-table tr:hover {
+    background: #fff7f7;
+}
+
+
+/* ========================================
+   TABLE ACTION BUTTON
+======================================== */
+
+.applications-table .view-btn {
+    background: #a00000;
+    color: white;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.applications-table .view-btn:hover {
+    background: #800000;
+}
+
+
+/* ========================================
+   BACK TO DASHBOARD
+======================================== */
+
+.back-dashboard {
+    margin-top: 25px;
+    padding: 11px 22px;
+    background: white;
+    color: #a00000;
+    border: 2px solid #a00000;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.back-dashboard:hover {
+    background: #a00000;
+    color: white;
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .dashboard-actions {
+        flex-direction: column;
+    }
+
+    .dashboard-actions button,
+    .dashboard-actions a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .applications-container {
+        width: 95%;
+        overflow-x: auto;
+    }
+
+    .applications-table {
+        min-width: 700px;
+    }
+
+}
+/* ==========================================
+   VIEW APPLICATION PAGE
+========================================== */
+
+.application-view-card{
+    max-width:900px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.application-view-card h2{
+    color:#8B0000;
+    margin-bottom:20px;
+}
+
+.application-info{
+    background:#f8f8f8;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:25px;
+}
+
+.answer-card{
+    margin-bottom:18px;
+    padding:18px;
+    border-left:5px solid #8B0000;
+    background:#fafafa;
+    border-radius:8px;
+}
+
+.answer-card h4{
+    margin-bottom:8px;
+    color:#8B0000;
+}
+
+.pdf-btn{
+    display:inline-block;
+    padding:10px 18px;
+    background:#8B0000;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.pdf-btn:hover{
+    background:#b30000;
+}
+
+.error-box{
+    text-align:center;
+    padding:40px;
+    color:red;
+    font-size:20px;
+}
+/* ===== View Application ===== */
+
+.application-view-card{
+    max-width:900px;
+    margin:30px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.answer-card{
+    margin-top:18px;
+    padding:16px;
+    background:#fafafa;
+    border-left:5px solid #8B0000;
+    border-radius:8px;
+}
+
+.answer-card h4{
+    color:#8B0000;
+    margin-bottom:8px;
+}
+
+.pdf-view-btn{
+    display:inline-block;
+    background:#8B0000;
+    color:white;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.pdf-view-btn:hover{
+    background:#b00000;
+}
+/* ===== Researcher Dashboard ===== */
+
+.dashboard-page{
+    background:#f5f5f5;
+    font-family:Arial,sans-serif;
+}
+
+.dashboard-container{
+    max-width:1000px;
+    margin:40px auto;
+    text-align:center;
+}
+
+.dashboard-container h1{
+    color:#8B0000;
+    margin-bottom:10px;
+}
+
+.dashboard-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.dashboard-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 18px rgba(139,0,0,0.25);
+}
+
+.dashboard-card h2{
+    color:#8B0000;
+    margin-bottom:10px;
+}
+
+.logout{
+    background:#8B0000;
+    color:white;
+}
+
+.logout h2,
+.logout p{
+    color:white;
+}
+/* Status Colors */
+
+.status-approved {
+    color: #16A34A;      /* Green */
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #F59E0B;      /* Orange */
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: #DC2626;      /* Red */
+    font-weight: bold;
+}
+.status-approved {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: #dc2626;
+    font-weight: bold;
+}
+.status-badge{
+    padding:8px 16px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.status-badge.pending{
+    background:#FFF4CC;
+    color:#A16207;
+}
+
+.status-badge.approved{
+    background:#DCFCE7;
+    color:#15803D;
+}
+
+.status-badge.rejected{
+    background:#FEE2E2;
+    color:#B91C1C;
+}
