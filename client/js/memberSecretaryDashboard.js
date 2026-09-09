@@ -15,7 +15,9 @@ async function loadApplications() {
 
     try {
 
-        const response = await fetch(API_BASE_URL + "/api/applications/all");
+        const response = await fetch(
+    API_BASE_URL + "/api/applications/all"
+);
         const applications = await response.json();
 
         tableBody.innerHTML = "";
