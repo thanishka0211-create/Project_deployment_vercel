@@ -8,7 +8,7 @@ loginForm.addEventListener("submit", async (e) => {
     const role = document.getElementById("role").value;
 
     try {
-        const response = await fetch(API_BASE_URL + "/api/login", {
+        const response = await fetch(API_BASE_URL + "/api/users/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
