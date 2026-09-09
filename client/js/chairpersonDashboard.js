@@ -12,7 +12,7 @@ const tableBody = document.getElementById("chairpersonTableBody");
 
 async function loadApplications() {
     try {
-        const response = await fetch(API_BASE_URL + "/api/chairperson/applications/all")
+        const response = await fetch(API_BASE_URL + "/api/applications/all");
 
         if (!response.ok) {
             throw new Error("Failed to fetch applications.");
