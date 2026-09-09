@@ -132,7 +132,7 @@ async function updateStatus(applicationId, status) {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/reviewer/update-status",
+            API_BASE_URL + "/api/reviewer/update-status",
             {
                 method: "PUT",
 
