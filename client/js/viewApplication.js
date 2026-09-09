@@ -7,7 +7,7 @@ const applicationId = params.get("id");
 
 const applicationContainer = document.getElementById("applicationContainer");
 
-const BASE_URL = fetch(API_BASE_URL + "/api/login")
+const BASE_URL = API_BASE_URL;
 
 // Get logged in role
 const role = localStorage.getItem("role");

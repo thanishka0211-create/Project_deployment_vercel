@@ -10,7 +10,7 @@ async function loadMyApplications() {
 
     try {
 
-        const response = await fetch(API_BASE_URL + "/api/login")
+        const response = await fetch(API_BASE_URL + "/api/applications/user/" + userId)
 
         if (!response.ok) {
             throw new Error("Failed to fetch applications");
