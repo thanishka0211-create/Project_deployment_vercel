@@ -157,7 +157,7 @@ document.getElementById("applicationForm").addEventListener("submit", async func
 
     try {
 
-        const response = await fetch(API_BASE_URL + "/api/applications",
+        const response = await fetch(API_BASE_URL + "/api/applications/submit",
             {
                 method: "POST",
                 body: formData
