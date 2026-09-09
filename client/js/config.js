@@ -1,1 +1,1 @@
-const API_BASE_URL = "https://project-deployment-vercel.onrender.com/";
+const API_BASE_URL = "https://project-deployment-vercel.onrender.com";
