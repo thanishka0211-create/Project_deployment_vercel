@@ -157,8 +157,7 @@ document.getElementById("applicationForm").addEventListener("submit", async func
 
     try {
 
-        const response = await fetch(
-            "http://localhost:5000/api/applications/submit",
+        const response = await fetch(API_BASE_URL + "/api/login",
             {
                 method: "POST",
                 body: formData
