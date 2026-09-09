@@ -111,7 +111,7 @@ registerForm.addEventListener(
             // ========================================
 
             const response =
-                await fetch(API_BASE_URL + "/api/login",
+                await fetch(API_BASE_URL + "/api/register",
 
                     {
 
