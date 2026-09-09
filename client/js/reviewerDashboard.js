@@ -12,7 +12,7 @@ const tableBody = document.getElementById("reviewerTableBody");
 
 async function loadApplications() {
     try {
-        const response = await fetch(API_BASE_URL + "/api/reviewer/applications");
+        const response = await fetch(API_BASE_URL + "/api/reviewer/applications/all");
 
         if (!response.ok) {
             throw new Error("Failed to fetch applications.");

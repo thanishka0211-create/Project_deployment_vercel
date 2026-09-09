@@ -15,7 +15,7 @@ async function loadApplications() {
 
     try {
 
-        const response = await fetch(API_BASE_URL + "/api/member-secretary/applications");
+        const response = await fetch(API_BASE_URL + "/api/member-secretary/applications/all");
         const applications = await response.json();
 
         tableBody.innerHTML = "";
